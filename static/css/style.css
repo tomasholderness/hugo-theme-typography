@@ -200,9 +200,17 @@ a, a:hover {
   transition: background 0.5s;
 }
 
+p a {
+  opacity: 80%;
+  border-radius: 3px;
+  text-decoration: none;
+  color: rgb(160, 21, 62);
+  padding: 2px;
+}
+
 p a:after, .sidenote a:after  {
   position: relative;
-  content: "°";
+  content: "";
   font-size: 90%;
   color: rgb(166, 140, 145);
   margin-left: 0.10em;
