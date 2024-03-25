@@ -2,6 +2,7 @@
 title: "Styles"
 date: 2023-08-01
 author: "the author"
+featured_image: /images/curlew.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh sit. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Consequat interdum varius sit amet mattis vulputate enim nulla. Turpis tincidunt id aliquet risus. Vulputate mi sit amet mauris commodo quis imperdiet massa. _Quam viverra orci sagittis eu volutpat odio._ Nunc faucibus a pellentesque sit amet porttitor eget. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Pellentesque elit eget gravida cum sociis natoque. Ut tristique et egestas quis ipsum suspendisse ultrices.
@@ -99,3 +100,4 @@ This is also to show how many alphabets fit on a single line, see [here](https:/
 
 {{< ps >}}
 An example of a post-script{{< /ps >}}
+
