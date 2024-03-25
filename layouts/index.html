@@ -5,11 +5,10 @@
     {{ if .Site.Params.introtag }}
         <div class="sidenote" style="margin-top: 1rem;">{{ .Site.Params.introtag }}</div>
     {{ end }}
-    <p class="intro-text">{{ .Site.Params.intro | markdownify }}
-        {{ if .Site.Params.introimg }}
-            <img src="{{ .Site.Params.introimg }}" width="100%" height="auto">
-        {{ end }}
-    </p>
+    {{ if .Site.Params.introimg }}
+        <div class="intro-img"><img src="{{ .Site.Params.introimg }}" height="auto"></div>
+    {{ end }}
+    <p class="intro-text">{{ .Site.Params.intro | markdownify }}</p>
 
     <div style="height: 2.5rem;"></div>
 {{ end }}
@@ -19,11 +18,12 @@
     {{ range where (where .Site.RegularPages "Type" "blog") "File.Dir" "blog/" | first 1 }}
     <div class="sidenote" style="margin-top: 1rem; font-style: italic;">{{ .Date.Format "Jan 2006" | markdownify }}</div>
         <h3 class="list"><a class="title">{{ .Title | lower | markdownify }}</a></h3>
-        {{ .Summary | markdownify }}
         {{- $image := resources.Get .Params.featured_image -}}
         {{ with $image}}
-            <div style="width:20%"><img src="{{ ($image.Fill "200x200 q100 Center").RelPermalink }}"></div>
+            <div style="float:left;width:25%"><img src="{{ ($image.Fill "200x200 q100 Center").RelPermalink }}"></div>
         {{ end}}
+        {{ .Summary | markdownify }}
+
     {{ end }}
 </p>
 
