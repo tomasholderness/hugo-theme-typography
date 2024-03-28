@@ -6,7 +6,7 @@
         <div class="sidenote" style="margin-top: 1rem;">{{ .Site.Params.introtag }}</div>
     {{ end }}
     {{ if .Site.Params.introimg }}
-        <div class="intro-img"><img src="{{ .Site.Params.introimg }}" height="auto"></div>
+        <div class="intro-img"><img src="{{- (resources.Get .Site.Params.introimg).RelPermalink -}}" height="auto"></div>
     {{ end }}
     <p class="intro-text">{{ .Site.Params.intro | markdownify }}</p>
 
