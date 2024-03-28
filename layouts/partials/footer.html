@@ -16,7 +16,11 @@
     </div>
     {{ else }}
     <div class="nav-outer">
-        <div class="nav-inner"></div>
+        <div class="nav-inner">
+            {{ if .Site.Params.copyrightOwner }}
+                <p>&copy {{.Site.Params.copyrightOwner}} {{ time.Now.Year }}</p>
+            {{ end}}
+        </div>
     </div>
     {{ end }}
 </div>
