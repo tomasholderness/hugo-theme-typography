@@ -224,8 +224,8 @@ a, a:hover {
 p a {
   opacity: 80%;
   border-radius: 3px;
-  text-decoration: none;
-  color: rgb(160, 21, 62);
+  text-decoration: underline;
+  color: #1434A4;
   padding: 2px;
 }
 
