@@ -1,5 +1,5 @@
+
 <div id="nav-border" class="container">
-    {{ if not .IsHome }}
     <div class="nav-outer">
         <div class="nav-inner">
             {{ with .Site.Menus.main }}
@@ -14,16 +14,8 @@
             {{ end }}
         </div>
     </div>
-    {{ else }}
-    <div class="nav-outer">
-        <div class="nav-inner">
-            {{ if .Site.Params.copyrightOwner }}
-                <p>&copy {{.Site.Params.copyrightOwner}} {{ time.Now.Year }}</p>
-            {{ end}}
-        </div>
-    </div>
-    {{ end }}
 </div>
+
 
 {{ range .Site.Params.customjs }}
     {{ $script := resources.Get . | minify }}

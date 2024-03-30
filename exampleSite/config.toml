@@ -4,7 +4,7 @@ title = 'typography'
 theme = "hugo-theme-typography"
 
 [params]
-  introtag  = "Introduction"  # sidenote at the top of the page
+  #introtag  = "Introduction"  # sidenote at the top of the page
   intro     = "A simple and minimalist Hugo theme that focuses on typography and legibility. Feel free to explore this demo to see the design elements and features [included](). If I add more text here what happens?"   # short introduction on the home page
   introimg  = "/images/curlew.jpg"
 
@@ -60,6 +60,8 @@ theme = "hugo-theme-typography"
         name = "Blog"
         url  = "/blog"
         weight = 2
+        identifier = "hide-from-nav"
+
     [[menu.main]]
         name = "About"
         url = "/about"

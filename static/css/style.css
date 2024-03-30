@@ -460,9 +460,7 @@ a.xref:after {
 }
 
 .intro-img  {
-  float:right;
-  width:30%;
-  margin-top: 1rem;
+  width:100%;
 }
 
 details {
