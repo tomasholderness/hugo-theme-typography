@@ -1,21 +1,9 @@
 
-<div id="nav-border" class="container">
-    <div class="nav-outer">
-        <div class="nav-inner">
-            {{ with .Site.Menus.main }}
-                {{ range sort . "Weight" }}
-                    {{ if ne .Identifier "hide-from-nav" }}
-                        <a class="internal" hyphens="none" href="{{ .URL }}">
-                            {{ $text := print .Name | safeHTML }}
-                            {{ $text }}
-                        </a>
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-        </div>
+{{ if .IsHome}}
+    <div class="copyright">
+        <p>&copy {{ .Site.Params.copyrightOwner }} {{ time.Now.Year }}</p>
     </div>
-</div>
-
+{{ end }}
 
 {{ range .Site.Params.customjs }}
     {{ $script := resources.Get . | minify }}
