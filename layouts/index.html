@@ -12,45 +12,14 @@
     {{ $filter := images.Grayscale }}
         {{with resources.Get .Site.Params.introimg}}
             {{ with . | images.Filter $filter }}
-                <div class="intro-img"><img src="{{ .RelPermalink }}" height="auto"></div>
+                <div class="intro-img"><img src="{{ .RelPermalink }}"></div>
             {{ end }}
         {{ end }}
     {{ end }}
 {{ end }}
 
-{{- /*
-<!--
-    <div style="height: 2.5rem;"></div>
-
-    <div class="sidenote" style="margin-top: 1rem;">Latest</div>
- 
-    <p class = "intro-text">
-    {{ range where (where .Site.RegularPages "Type" "blog") "File.Dir" "blog/" | first 1 }}
-    <div class="sidenote" style="margin-top: 1rem; font-style: italic;">{{ .Date.Format "Jan 2006" | markdownify }}</div>
-        <h3 class="list"><a class="title">{{ .Title | lower | markdownify }}</a></h3>
-        {{- $image := resources.Get .Params.featured_image -}}
-        {{ with $image}}
-            <div style="float:left;width:25%"><img src="{{ ($image.Fill "200x200 q100 Center").RelPermalink }}"></div>
-        {{ end}}
-        {{ .Summary | markdownify }}
-
-    {{ end }}
-</p> -->
-*/ -}}
-
-{{- /*
-<!-- <div style="height: 2.5rem;"></div>
-<div class="sidenote" style="margin-top: 0.5rem;">Pages</div>
-{{ with .Site.Menus.main }}
-    {{ range sort . "Weight" }}
-        {{ if ne .Name "Home" }}
-            <h3 class="list"><a class="title" href="{{ .URL }}">{{ .Name | lower | markdownify }}</a></h3>
-        {{ end }}
-    {{ end }}
-{{ end }} -->
-*/ -}}
 <div>
-    <h2 >POSTS</h2>
+    <h2>POSTS</h2>
     {{ range $k, $v := where (where .Site.RegularPages "Type" "blog") "File.Dir" "blog/" }}
         {{ if .Date }}
             {{ if not $k }}
@@ -65,7 +34,7 @@
                 <div class="sidenote">no date</div>
             {{ end }}
         {{ end }}
-        <h3 class="list"><a class="title" href="{{ .Permalink }}">{{ .Title | lower | markdownify }}</a></h3>
+        <h3 class="list"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ end }}
 </div>
 {{ if .Site.Params.social }}
