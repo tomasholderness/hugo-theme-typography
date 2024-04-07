@@ -130,6 +130,7 @@ h2.article-title {
 h3.list {
   font-weight: 711;
   margin-top: 0.5rem;
+  color: red
 }
 
 #doc h1, h2, h3 {
@@ -189,7 +190,7 @@ h3.list {
   color: #666;
   bottom:0;
   right:0;
-  text-align: center;
+  text-align: left;
 
 }
 
@@ -216,18 +217,8 @@ a {
   opacity: 80%;
   border-radius: 3px;
   text-decoration: none;
-  color: inherit;
+  color: #1434A4;
   padding: 2px;
-}
-
-a:hover {
-  opacity: 100%;
-  background: rgba(166, 140, 145, 0.5);
-  border-radius: 3px;
-}
-
-a, a:hover {
-  transition: background 0.5s;
 }
 
 p a {
@@ -271,7 +262,7 @@ figure {
 }
 
 img {
-  width: 95%;
+  width: 100%;
 }
 
 figcaption {
@@ -544,12 +535,6 @@ kbd {
   padding-right: 0.3rem;
 }
 
-.article-nav-inner a.internal:hover {
-  background-color: rgba(166, 140, 145, 0.5);
-  transition: opacity 0.5s;
-  border-radius: 0;
-}
-
 /* Navbar at the bottom */
 .nav-outer, .nav-inner {
   margin: 0;
@@ -574,7 +559,6 @@ kbd {
   top: 0;
   width: 38rem;
   opacity: 0.95;
-  border-top: 0.2rem solid #444;
 }
 
 @media all and (max-width: 1200px) {
@@ -600,11 +584,12 @@ kbd {
   border-radius: 0;
 }
 
+/* Navbar 
 .nav-inner a.internal:hover {
   background-color: rgba(166, 140, 145, 0.5);
   transition: opacity 0.5s;
   border-radius: 0;
-}
+}*/
 
 @media all and (max-width: 1200px) {
   .nav-inner {
